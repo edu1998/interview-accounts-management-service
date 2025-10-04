@@ -48,7 +48,7 @@ describe('TransactionsService', () => {
         type: TransactionType.DEPOSIT,
         amount: 100,
       };
-      const account = Account.create('John Doe', 100);
+      const account = Account.create('Eduardo Tordecilla', 100);
       const transaction = Transaction.create(
         createTransactionDto.accountId,
         createTransactionDto.type,

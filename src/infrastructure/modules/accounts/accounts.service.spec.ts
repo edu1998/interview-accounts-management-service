@@ -33,7 +33,7 @@ describe('AccountsService', () => {
   describe('create', () => {
     it('should call the CreateAccountUseCase', async () => {
       const createAccountDto = {
-        accountHolderName: 'John Doe',
+        accountHolderName: 'Eduardo Tordecilla',
         initialBalance: 100,
       };
       const account = Account.create(
@@ -50,7 +50,7 @@ describe('AccountsService', () => {
 
   describe('findAll', () => {
     it('should call the ListAccountsUseCase', async () => {
-      const accounts = [Account.create('John Doe', 100)];
+      const accounts = [Account.create('Eduardo Tordecilla', 100)];
       accountRepository.findAll.mockResolvedValue(accounts);
 
       const result = await service.findAll();
@@ -61,7 +61,7 @@ describe('AccountsService', () => {
 
   describe('findOne', () => {
     it('should call the GetAccountUseCase', async () => {
-      const account = Account.create('John Doe', 100);
+      const account = Account.create('Eduardo Tordecilla', 100);
       accountRepository.findById.mockResolvedValue(account);
 
       const result = await service.findOne('1');

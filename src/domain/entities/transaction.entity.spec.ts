@@ -29,7 +29,7 @@ describe('Transaction Entity', () => {
 
   describe('applyTo', () => {
     it('should call the factory with the correct transaction type and then apply the strategy', () => {
-      const account = Account.create('John Doe', 100);
+      const account = Account.create('Eduardo Tordecilla', 100);
       const transaction = Transaction.create(
         account.id ?? '1',
         TransactionType.DEPOSIT,
