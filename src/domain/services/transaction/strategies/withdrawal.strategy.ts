@@ -1,5 +1,5 @@
 import { TransactionStrategy } from './transaction.strategy';
-import { Account } from '../account.entity';
+import { Account } from '../../../entities/account.entity';
 
 export class WithdrawalStrategy implements TransactionStrategy {
   apply(account: Account, amount: number): void {

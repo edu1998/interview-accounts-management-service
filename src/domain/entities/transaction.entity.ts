@@ -1,6 +1,6 @@
 import { TransactionType } from '../../resources/enums/transaction-type.enum';
 import { Account } from './account.entity';
-import { TransactionStrategyFactory } from './factories/transaction-strategy.factory';
+import { TransactionStrategyFactory } from '../services/transaction/factories/transaction-strategy.factory';
 
 export class Transaction {
   private constructor(

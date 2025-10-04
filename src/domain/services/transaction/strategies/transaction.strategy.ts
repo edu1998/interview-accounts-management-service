@@ -1,4 +1,4 @@
-import { Account } from '../account.entity';
+import { Account } from '../../../entities/account.entity';
 
 export interface TransactionStrategy {
   apply(account: Account, amount: number): void;
