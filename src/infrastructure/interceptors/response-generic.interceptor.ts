@@ -1,12 +1,10 @@
 import {
-  BadRequestException,
   CallHandler,
   ExecutionContext,
   Injectable,
   NestInterceptor,
 } from '@nestjs/common';
 import { map } from 'rxjs/operators';
-import { validate } from 'class-validator';
 import { Observable } from 'rxjs';
 
 export interface Response {
@@ -45,7 +43,7 @@ export class ResponseGenericInterceptor implements NestInterceptor {
       map((response) => {
         return {
           data: response,
-          ...ResponseGenericInterceptor.checkMessage(req.method),
+          ...ResponseGenericInterceptor.checkMessage(req.method as string),
         };
       }),
     );
