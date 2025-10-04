@@ -13,5 +13,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     AccountsService,
     { provide: AccountRepository, useClass: AccountTypeormRepository },
   ],
+  exports: [AccountRepository],
 })
 export class AccountsModule {}
