@@ -20,13 +20,13 @@ export class Account {
   }
 
   public deposit(amount: number): void {
-    if (amount <= 0) throw new Error('El depósito debe ser positivo');
+    if (amount <= 0) throw new Error('The deposit must be positive');
     this.balance += amount;
   }
 
   public withdraw(amount: number): void {
-    if (amount <= 0) throw new Error('El retiro debe ser positivo');
-    if (this.balance < amount) throw new Error('Saldo insuficiente');
+    if (amount <= 0) throw new Error('Retirement must be positive');
+    if (this.balance < amount) throw new Error('Insufficient balance');
     this.balance -= amount;
   }
 
